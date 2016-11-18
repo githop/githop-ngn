@@ -1,0 +1,26 @@
+
+.gth-home {
+  cursor: pointer;
+}
+
+.gth-nav {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: #F90050;
+  font-size: 5vmax;
+  border-bottom: none;
+}
+
+.gth-nav__controls {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 0 5px;
+}
+
+.gth-nav__controls div, .gth-nav div {
+  padding: 5px;
+}

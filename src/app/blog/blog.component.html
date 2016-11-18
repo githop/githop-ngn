@@ -1,0 +1,18 @@
+<div class="gth-border">
+  <h1>Blog</h1>
+
+  <div class="" *ngFor="let article of blogService.articles | async">
+
+    <h1>{{article.title}}</h1>
+
+    <div *ngFor="let content of article.content">
+
+      <div [ngSwitch]="content.kind">
+        <img *ngSwitchCase="'Image'" [src]="content.href" style="width: 100%"/>
+        <h3 *ngSwitchCase="'Header'">{{content.text}}</h3>
+        <p *ngSwitchCase="'Paragraph'" [innerHtml]="content.text"></p>
+      </div>
+
+    </div>
+  </div>
+</div>

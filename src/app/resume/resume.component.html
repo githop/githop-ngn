@@ -1,0 +1,26 @@
+<div class="gth-resume gth-border">
+
+  <div *ngFor="let card of cards" class="gth-card">
+    <div class="gth-card__header">
+      <h2>{{card.title}}</h2>
+    </div>
+    <div class="gth-card__body">
+      <div *ngFor="let content of card.content; let last = last;">
+        <div class="body__info">
+          <h3>
+            <a *ngIf="content.href" [href]="content.href" target="_blank" rel="noreferrer noopener">{{content.title}}</a>
+            <span *ngIf="!content.href">{{content.title}}</span>
+          </h3>
+          <p>{{content.date}}</p>
+        </div>
+
+        <p [innerHtml]="content.description"></p>
+        <ul *ngIf="content.accomplishments">
+          <li *ngFor="let accomplishment of content.accomplishments">{{accomplishment.text}}</li>
+        </ul>
+        <hr *ngIf="!last">
+      </div>
+    </div>
+  </div>
+
+</div>

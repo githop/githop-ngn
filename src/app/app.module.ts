@@ -2,8 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import {LandingModule} from "./landing/landing.module";
 
 import { AppComponent } from './app.component';
+import {AppRoutesModule} from "./app.routes";
+import {BlogModule} from "./blog/blog.module";
 
 @NgModule({
   declarations: [
@@ -12,7 +15,10 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    LandingModule,
+    AppRoutesModule,
+    BlogModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

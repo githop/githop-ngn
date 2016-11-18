@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+.gth-border {
+  border-image: linear-gradient(90deg, #F96A00, #FAAB00, #DAF204) 10;
+  border-width: 4px;
+  border-style: solid;
+}
