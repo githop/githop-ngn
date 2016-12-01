@@ -17,7 +17,7 @@ export class BlogComponent implements OnInit {
         this.articles = articles.reduce((accm, a) => {
           accm.push(a.getSnippet());
           return accm;
-        }, articleSnippets)
+        }, articleSnippets).sort((a, b) => +b.date - +a.date)
       })
   }
 

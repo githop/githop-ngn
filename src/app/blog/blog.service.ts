@@ -5,6 +5,7 @@
 import {Injectable} from "@angular/core";
 import {Http, Response} from "@angular/http";
 import {Observable, BehaviorSubject} from "rxjs";
+import {environment} from "../../environments/environment";
 
 export interface ArticleModel {
   title: string
@@ -34,6 +35,7 @@ export interface Style {
 export interface ArticleSnippet {
   title: string
   id: number
+  date: Date
   image?: string
   header?: string
   para?: string
@@ -43,10 +45,12 @@ export class Article implements ArticleModel, ArticleSnippet {
   public id;
   public title;
   public content;
+  public date;
   constructor(articleData) {
     this.id = articleData.id;
     this.title = articleData.title;
     this.content = articleData.content;
+    this.date = new Date(articleData.date);
   }
 
   getSnippet(): ArticleSnippet {
@@ -54,6 +58,7 @@ export class Article implements ArticleModel, ArticleSnippet {
     return {
       id: this.id,
       title: this.title,
+      date: this.date,
       image: snippet[0].href,
       header: snippet[1].text,
       para: snippet[2].text
@@ -118,7 +123,7 @@ export class BlogService {
   }
 
   private _getArticles() {
-    return this.http.get('http://localhost:3000/articles')
+    return this.http.get(environment.apiUrl + '/articles')
       .map(this.extractData)
       .catch(this.handleError)
       .subscribe(articlesData => {

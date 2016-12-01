@@ -1,6 +1,7 @@
 
 .gth-resume {
   border-bottom: none;
+  /*font-size: 1.5vw;*/
 }
 
 .body__info {
@@ -8,4 +9,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.body__info h3 {
+  padding: 0 10px;
 }

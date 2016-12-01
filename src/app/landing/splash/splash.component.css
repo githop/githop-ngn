@@ -1,7 +1,14 @@
 
 .gth-splash {
-  position: absolute;
-  height: 70%;
+  text-align: center;
+  width: calc(100vw - 108px);
+  height: 100%;
   background: black;
   color:white;
+  padding: 0 50px
+}
+
+.gth-profile {
+  width: 195px;
+  height: 195px;
 }
