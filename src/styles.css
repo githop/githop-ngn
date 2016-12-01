@@ -5,3 +5,43 @@
   border-width: 4px;
   border-style: solid;
 }
+
+.gth-card {
+  margin-bottom: 4px;
+}
+
+.gth-card__header, .gth-card__body {
+  padding: 0.75em 6em;
+  margin-bottom: 4px;
+}
+
+
+.gth-blog__content {
+  padding: 0.75em 6em;
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .gth-card__header, .gth-card__body, .gth-blog__content {
+    padding: 0.75em 2em;
+  }
+}
+
+.gth-blog__content span img {
+  width: 100%;
+  padding: 0;
+}
+
+.gth-card__header {
+  /*height: 3em;*/
+  color: #F90050;
+  background: black;
+}
+
+.gth-card__body {
+  background: white;
+  color: black;
+}
+

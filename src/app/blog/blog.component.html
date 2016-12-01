@@ -1,18 +1,16 @@
-<div class="gth-border">
-  <h1>Blog</h1>
+<div class="gth-border gth-blog">
 
-  <div class="" *ngFor="let article of blogService.articles | async">
-
-    <h1>{{article.title}}</h1>
-
-    <div *ngFor="let content of article.content">
-
-      <div [ngSwitch]="content.kind">
-        <img *ngSwitchCase="'Image'" [src]="content.href" style="width: 100%"/>
-        <h3 *ngSwitchCase="'Header'">{{content.text}}</h3>
-        <p *ngSwitchCase="'Paragraph'" [innerHtml]="content.text"></p>
-      </div>
-
+  <div class="gth-card" *ngFor="let article of articles">
+    <div class="gth-card__header" [routerLink]="['/blog/post', article.id]" [ngStyle]="setBgImage(article.image)">
+        <h1><span class="gth-card__header--text">{{article.title}}</span></h1>
     </div>
+
+    <div class="gth-card__body">
+      <h4>{{article.header}}</h4>
+      <div [innerHtml]="article.para"></div>
+    </div>
+
+
   </div>
+
 </div>

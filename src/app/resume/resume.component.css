@@ -3,35 +3,6 @@
   border-bottom: none;
 }
 
-.gth-card {
-  margin-bottom: 4px;
-}
-
-.gth-card__header, .gth-card__body {
-  padding: 0.75em 6em;
-  margin-bottom: 4px;
-}
-
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 480px)
-and (-webkit-min-device-pixel-ratio: 2) {
-  .gth-card__header, .gth-card__body {
-    padding: 0.75em 2em;
-  }
-}
-
-.gth-card__header {
-  /*height: 3em;*/
-  color: #F90050;
-  background: black;
-}
-
-.gth-card__body {
-  background: white;
-  color: black;
-}
-
 .body__info {
   display: flex;
   flex-direction: row;

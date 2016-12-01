@@ -1,0 +1,14 @@
+
+.gth-blog__card {
+  background: white;
+}
+
+.gth-card__header--text {
+  background-color:black;
+  /*position: absolute;*/
+}
+
+.gth-card__header--wrapper {
+  position: relative;
+}
+

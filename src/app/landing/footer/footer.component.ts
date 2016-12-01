@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'gth-footer',
   template: `
 <footer class="gth-footer gth-border">
-  <h3>Build with love by githop</h3>
+  <h3>Built with love by githop</h3>
 </footer>
   `,
   styleUrls: ['./footer.component.css']

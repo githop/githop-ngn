@@ -1,11 +1,10 @@
 import {NgModule, ModuleWithProviders} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BlogComponent } from './blog.component';
+import {BlogComponent} from './blog.component';
 import { HttpModule } from "@angular/http";
 import {BlogService} from "./blog.service";
-import {BlogRoutesModule} from "./blog.routes.module";
-
-
+import {BlogRoutesModule} from "./blog.routes";
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   imports: [
@@ -13,7 +12,7 @@ import {BlogRoutesModule} from "./blog.routes.module";
     HttpModule,
     BlogRoutesModule
   ],
-  declarations: [BlogComponent]
+  declarations: [BlogComponent, PostComponent]
 })
 export class BlogModule {
   static forRoot(): ModuleWithProviders {

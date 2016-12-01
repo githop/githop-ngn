@@ -1,0 +1,14 @@
+<div class="gth-border gth-card gth-article">
+  <div class="gth-card__header">
+    <h1>{{article?.title}}</h1>
+  </div>
+
+    <div *ngFor="let content of article?.content; let index = index">
+      <div [ngSwitch]="content.kind" class="gth-blog__content" [ngStyle]="blogService.getStyle(content.kind, article.content[index + 1]?.kind)">
+        <img *ngSwitchCase="'Image'" [src]="content.href"/>
+        <h2 *ngSwitchCase="'Header'">{{content.text}}</h2>
+        <div *ngSwitchCase="'Paragraph'" [innerHtml]="content.text"></div>
+      </div>
+    </div>
+
+</div>
