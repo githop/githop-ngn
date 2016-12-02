@@ -1,7 +1,7 @@
 <div class="gth-border gth-blog">
 
-  <div class="gth-card" *ngFor="let article of articles">
-    <div class="gth-card__header" [routerLink]="['/blog/post', article.id]" [ngStyle]="setBgImage(article.image)">
+  <div class="gth-card gth-card--blog" [routerLink]="['/blog/post', article.id]" *ngFor="let article of articles">
+    <div class="gth-card__header" [ngStyle]="setBgImage(article.image)">
         <h1><span class="gth-card__header--text">{{article.title}}</span></h1>
     </div>
 

@@ -1,6 +1,6 @@
 
-.gth-blog__card {
-  background: white;
+.gth-card--blog {
+  cursor: pointer;
 }
 
 .gth-card__header--text {

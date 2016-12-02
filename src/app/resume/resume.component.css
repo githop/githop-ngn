@@ -11,6 +11,12 @@
   align-items: center;
 }
 
-.body__info h3 {
-  padding: 0 10px;
+@media only screen
+and (min-device-width: 319px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .body__info {
+    display: block;
+  }
 }
+
