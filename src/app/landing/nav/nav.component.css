@@ -22,6 +22,10 @@
   padding: 0 5px;
 }
 
+a {
+  color: #F90050;
+}
+
 .gth-nav__controls div, .gth-nav div {
   padding: 5px;
 }
