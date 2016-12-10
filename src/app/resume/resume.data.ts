@@ -7,6 +7,7 @@ export interface CardInfo {
   href?: string
   date: string
   description: string
+  position?: string
   accomplishments?: Array<{text: string}>
 }
 
@@ -23,6 +24,7 @@ export const experience: ResumeCard = {
       href: 'https://inthetelling.com/',
       date: 'Current',
       description: 'In the Telling provides high quality course content to universities and businesses. Main product (the Narrasys Producer) enables universities to create interactive media experiences centered around video, all online (similar to a traditional non-linear editor). Application is written in AngularJS client with a Rails API server and MongoDB.</p><p>A typical day consists of working with an agile team to build new features and maintain/ refactoring existing features.',
+      position: 'Front End Engineer',
       accomplishments: [
         { text: 'Design, implement, and test new features' },
         { text: 'Build internal tools for development team to facilitate testing, release and development (version control / doc generation, source code / template generation, perf / stress testing and optimization)' },
@@ -33,12 +35,14 @@ export const experience: ResumeCard = {
       title: 'Briebug Solultions',
       href: 'http://briebugsoftwaresolutions.com/',
       date: 'September 2015 - Short Term Contract',
+      position: 'Full stack developer - PHP/JS',
       description: 'Briebug Solutions specializes in providing business applications solutions with the MEAN stack. Briebug utilizes a test driven approach to software development in order to produce maintainable, reusable and modular codebases. Toolchain includes NodeJS, AngularJS, Gulp, Karma/Mocha, MongoDB as well as other tools if necessary to provide an appropriate solution.'
     },
     {
       title: 'Tranheroic',
       href:'http://trainheroic.com/',
       date: 'December 2014 - June 2015',
+      position: 'Software Engineer',
       description: 'TrainHeroic is a startup specializing in fitness and coach/gym driven workout programs located in Boulder, CO. Product portfolio consists of three web apps, (coach/athlete portal and marketplace) and an iPhone app. Server stack consists of of a monolith PHP app being replaced by a Laravel API. Coach portal and marketplace client apps are AngularJS, athlete portal is currently being rewritten in Angular.',
       accomplishments: [
         { text: 'Contribute to day to day development on agile team.' },
@@ -60,6 +64,12 @@ export const experience: ResumeCard = {
 export const sideProjects: ResumeCard = {
   title: 'Side Projects',
   content: [
+    {
+      title: 'githop.com (Angular 2 version)',
+      href: 'http://githop.com',
+      date: 'November 2016',
+      description: 'Update of my personal blog / website to Angular 2 with a Rails api backend. Client app is built with angular-cli and features lazily loaded modules and Ahead of Time Compilation. Source code: (<a href="https://github.com/githop/githop-ng2" target="_blank" rel="noreferrer noopener">client</a> / <a href="https://github.com/githop/githop-api" target="_blank" rel="noreferrer noopener">server</a>)'
+    },
     {
       title: 'Sierpinski Triangle',
       href: 'http://githop.github.io/sierpinski-canvas/',

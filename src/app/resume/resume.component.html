@@ -14,6 +14,7 @@
           <p>{{content.date}}</p>
         </div>
 
+        <h4>{{content.position}}</h4>
         <p [innerHtml]="content.description"></p>
         <ul *ngIf="content.accomplishments">
           <li *ngFor="let accomplishment of content.accomplishments">{{accomplishment.text}}</li>

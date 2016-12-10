@@ -24,14 +24,6 @@ export interface Content {
   updated_at: Date
 }
 
-export interface Style {
-  background?: string
-  'margin-bottom'?: string
-  color?: string
-  width?: string
-  padding?: string
-}
-
 export interface ArticleSnippet {
   title: string
   id: number
@@ -47,22 +39,22 @@ export class Article implements ArticleModel, ArticleSnippet {
   public content;
   public date;
   constructor(articleData) {
-    this.id = articleData.id;
-    this.title = articleData.title;
-    this.content = articleData.content;
-    this.date = new Date(articleData.date);
+    Object.keys(articleData).forEach(prop => {
+      this[prop] = articleData[prop];
+    });
+
   }
 
   getSnippet(): ArticleSnippet {
     const snippet = this.content.slice(0,3);
-    return {
+    return new Article ({
       id: this.id,
       title: this.title,
       date: this.date,
       image: snippet[0].href,
       header: snippet[1].text,
       para: snippet[2].text
-    };
+    });
   }
 }
 
@@ -75,51 +67,6 @@ export class BlogService {
 
   get articles() {
     return this._articles;
-  }
-
-  getStyle(kind, nextKind): Style {
-    if (kind === 'Header' && nextKind === 'Paragraph') {
-      return { 'background': 'black', 'margin-bottom': '4px', 'color': '#F90050' };
-    }
-
-    if (kind === 'Paragraph' && nextKind === 'Header') {
-      return { 'background': 'white', 'margin-bottom': '4px' };
-    }
-
-    if (kind === 'Paragraph' && nextKind === 'Paragraph' ||
-        kind === 'Paragraph' && nextKind === 'Image') {
-      return { 'background': 'white', 'margin-bottom': 'none' };
-    }
-
-    if (kind === 'Paragraph' && nextKind === null) {
-      return { 'background': 'white', 'margin-bottom': '0' }
-    }
-
-    if (kind === 'Image' && nextKind === 'Paragraph') {
-      return { 'background': 'white', 'margin-bottom': 'none', 'padding': '0' };
-    }
-
-    if (kind === 'Image' && nextKind === 'Header' ||
-        kind === 'Image' && nextKind === null) {
-      return { 'margin-bottom': '0', 'padding': '0' }
-    }
-  }
-
-  getStyleBlog(kind, nextKind): Style {
-    if (kind === 'Header' && nextKind === 'Header' || kind === 'Header' && nextKind === 'Paragraph') {
-      return {'background': 'black', 'margin-bottom': '0', 'color': '#f90050'}
-    }
-
-    if (kind === 'Paragraph') {
-      return { 'background': 'white', 'margin-bottom': '4px' }
-    }
-
-    if (kind === 'Paragraph' && nextKind === 'Header' || kind === "Paragraph" && nextKind === null) {
-      console.log('wtf');
-      // return { 'background': 'white', 'margin-bottom': '4px' }
-    }
-
-
   }
 
   private _getArticles() {

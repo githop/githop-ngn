@@ -1,5 +1,19 @@
-import {Component, OnInit, AfterViewInit} from '@angular/core';
+import {Component, OnInit, AfterViewInit, Pipe, PipeTransform} from '@angular/core';
 import {BlogService, Article, ArticleSnippet} from "./blog.service";
+
+
+@Pipe({name: 'bgImage'})
+export class BgImagePipe implements PipeTransform {
+  transform(imageHref: string) {
+    return {
+      'background': `url(${imageHref})`,
+      'background-size': 'cover',
+      'background-repeat': 'none',
+      'margin-bottom': '0',
+      'background-color': 'white'
+    };
+  }
+}
 
 @Component({
   selector: 'app-blog',
@@ -18,22 +32,12 @@ export class BlogComponent implements OnInit, AfterViewInit {
         this.articles = articles.reduce((accm, a) => {
           accm.push(a.getSnippet());
           return accm;
-        }, articleSnippets).sort((a, b) => +b.date - +a.date);
+        }, articleSnippets).sort((a, b) => +new Date(b.date) - +new Date(a.date));
         this.loading = false;
       })
   }
 
   ngAfterViewInit() {
     this.loading = this.articles.length === 0;
-  }
-
-  setBgImage(href) {
-    return {
-      'background': `url(${href})`,
-      'background-size': 'cover',
-      'background-repeat': 'none',
-      'margin-bottom': '0',
-      'background-color': 'white'
-    };
   }
 }
