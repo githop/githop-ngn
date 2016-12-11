@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://githop.com'
+  apiUrl: 'http://githop.com/api'
 };
