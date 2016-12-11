@@ -1,3 +1,6 @@
+.gth-blog {
+  border-bottom: none;
+}
 
 .gth-card--blog {
   cursor: pointer;
@@ -5,7 +8,6 @@
 
 .gth-card__header--text {
   background-color:black;
-  /*position: absolute;*/
 }
 
 .gth-card__header--wrapper {
@@ -18,4 +20,15 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.gth-card__controls button {
+  background-color: black;
+  color: white;
+  font: inherit;
+  font-size: 24px;
+  padding: 0.5em;
+  width: 100%;
+  border: none;
+}
+
 

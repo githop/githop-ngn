@@ -61,12 +61,29 @@ export class Article implements ArticleModel, ArticleSnippet {
 @Injectable()
 export class BlogService {
   private _articles: BehaviorSubject<Array<Article>|Array<ArticleSnippet>> = new BehaviorSubject([]);
+  private _page = 4;
+  private _pages;
   constructor(private http: Http) {
     this._getArticles();
   }
 
+  get page() {
+    return this._page
+  }
+
+
   get articles() {
     return this._articles;
+  }
+
+  calcPages() {
+    this._pages = Math.ceil(this.articles.value.length / 4);
+  }
+
+  showMore() {
+    if (this.page < this.articles.value.length) {
+      this._page += 4;
+    }
   }
 
   private _getArticles() {
@@ -78,6 +95,7 @@ export class BlogService {
           a = new Article(a.article);
           return a;
         });
+        this._pages = Math.ceil(articlesArr.length / this.page);
         this._articles.next(articlesArr)
       });
   }
