@@ -8,7 +8,7 @@
   </div>
 
   <div *ngIf="!loading">
-    <div class="gth-card gth-card--blog" [routerLink]="['/blog/post', article.id]" *ngFor="let article of articles">
+    <div class="gth-card gth-card--blog" [routerLink]="['/blog/post', article.id]" *ngFor="let article of articles.slice(0, blogService.page)">
       <div class="gth-card__header" [ngStyle]="article.image | bgImage">
         <h1><span class="gth-card__header--text">{{article.title}}</span></h1>
       </div>
@@ -20,6 +20,10 @@
         </div>
         <div [innerHtml]="article.para"></div>
       </div>
+    </div>
+
+    <div *ngIf="blogService.page < articles.length" class="gth-card__controls">
+      <button (click)="blogService.showMore()">show more</button>
     </div>
   </div>
 

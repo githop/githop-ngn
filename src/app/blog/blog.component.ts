@@ -21,10 +21,10 @@ export class BgImagePipe implements PipeTransform {
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit, AfterViewInit {
-  constructor(private blogService: BlogService) { }
-
   articles;
   loading;
+  constructor(public blogService: BlogService) { }
+
   ngOnInit() {
     const articleSnippets: Array<ArticleSnippet> = [];
     this.blogService.articles
@@ -34,6 +34,7 @@ export class BlogComponent implements OnInit, AfterViewInit {
           return accm;
         }, articleSnippets).sort((a, b) => +new Date(b.date) - +new Date(a.date));
         this.loading = false;
+        this.blogService.calcPages();
       })
   }
 
