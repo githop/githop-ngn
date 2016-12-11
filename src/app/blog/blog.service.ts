@@ -71,7 +71,6 @@ export class BlogService {
     return this._page
   }
 
-
   get articles() {
     return this._articles;
   }
