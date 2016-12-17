@@ -68,7 +68,7 @@ export const sideProjects: ResumeCard = {
       title: 'githop.com (Angular 2 version)',
       href: 'http://githop.com',
       date: 'November 2016',
-      description: 'Update of my personal blog / website to Angular 2 with a Rails api backend. Client app is built with angular-cli and features lazily loaded modules and Ahead of Time Compilation. Source code: (<a href="https://github.com/githop/githop-ng2" target="_blank" rel="noreferrer noopener">client</a> / <a href="https://github.com/githop/githop-api" target="_blank" rel="noreferrer noopener">server</a>)'
+      description: 'Update of my personal blog / website to Angular 2 with a Rails api backend. Client app is built with angular-cli and features lazily loaded modules and Ahead of Time Compilation. Source code: (<a href="https://github.com/githop/githop-ngn" target="_blank" rel="noreferrer noopener">client</a> / <a href="https://github.com/githop/githop-api" target="_blank" rel="noreferrer noopener">server</a>)'
     },
     {
       title: 'Sierpinski Triangle',
