@@ -65,6 +65,12 @@ export const sideProjects: ResumeCard = {
   title: 'Side Projects',
   content: [
     {
+      title: 'Sierpinski Triangle animated',
+      href: 'https://githop.github.io/animate-canvas/',
+      date: 'December 2016',
+      description: 'Animated drawing of Sierpinski triangles with HTML5 canvas, typescript, and async/await.'
+    },
+    {
       title: 'githop.com (Angular 2 version)',
       href: 'http://githop.com',
       date: 'November 2016',
