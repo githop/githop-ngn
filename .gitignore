@@ -28,6 +28,7 @@ testem.log
 
 #firebase configs
 /src/environments/firebase*
+functions/githop-backend-firebase-adminsdk-9ldd1-92341a324f.json
 
 # e2e
 /e2e/*.js

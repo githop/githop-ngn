@@ -1,0 +1,1496 @@
+{
+  "articles": [
+    {
+      "article": {
+        "id": 1,
+        "date": "2015-06-27",
+        "title": "Hello Internet",
+        "content": [
+          {
+            "type": "Image",
+            "sort_order": 0,
+            "article_id": 1
+          },
+          {
+            "type": "Header",
+            "text": "Welcome to my blog",
+            "sort_order": 1,
+            "article_id": 1
+          },
+          {
+            "type": "Paragraph",
+            "text": "If you know me, you probably know I enjoy a good conversation and can be rather talkative in general. Strangely enough, that doesn’t seem to translate into me blogging very often. Blogging platforms have long been available to those with the urge to blog. So if it were the case that I needed a blogging outlet, you likely wouldn’t be reading this here. ",
+            "sort_order": 2,
+            "article_id": 1
+          },
+          {
+            "type": "Header",
+            "text": "So what brings us here?",
+            "sort_order": 3,
+            "article_id": 1
+          },
+          {
+            "type": "Paragraph",
+            "text": "Well odds are you likely know me personally. If that is the case, then I likely referred you here. Another case could be that you are a fellow engineer, or perhaps a recruiter here to check out my credentials. If you are an engineer, hopefully you came here from github to see my code live on the web.\n",
+            "sort_order": 4,
+            "article_id": 1
+          },
+          {
+            "type": "Header",
+            "text": "From soup to nuts",
+            "sort_order": 5,
+            "article_id": 1
+          },
+          {
+            "type": "Paragraph",
+            "text": "At the end of the day, this is probably going to mostly be an engineering blog. At the time of writing this post the blog has reached a point where I can display articles. So I’ve begun to curate content. After all, it turns out you need content on a blog.",
+            "sort_order": 6,
+            "article_id": 1
+          },
+          {
+            "type": "Paragraph",
+            "text": "This blog is built from various web technologies mostly from scratch. It’s pretty easy to build a blog with the tools we have available these days. In particular, when this post was authored, I’m using a Rails server to serve an AngularJS app. The Angular app is what you (the client) are currently interfaced with. ",
+            "sort_order": 7,
+            "article_id": 1
+          },
+          {
+            "type": "Paragraph",
+            "text": "Currently, the resume section of this blog is all static HTML and JS. This blog content is being served from Rails as JSON (and consumed by Angular). Up the chain, all of this is being served via a digital ocean VM running Ubuntu Server. I use NGINX as a proxy to Unicorn which is the server I have chosen to use in my Rails production environment. Phew! ",
+            "sort_order": 8,
+            "article_id": 1
+          },
+          {
+            "type": "Header",
+            "text": "Welcome and Thanks for Stopping By!",
+            "sort_order": 9,
+            "article_id": 1
+          },
+          {
+            "type": "Paragraph",
+            "text": "The main purpose of this blog is more or less a personal sandbox. Who knows, perhaps I’ll come around to blogging and post more non-engineering content. That would give me a reason to implement tags, of course ;) .",
+            "sort_order": 10,
+            "article_id": 1
+          }
+        ]
+      }
+    },
+    {
+      "article": {
+        "id": 2,
+        "date": "2015-06-28",
+        "title": "Client Series - Intro",
+        "content": [
+          {
+            "type": "Image",
+            "sort_order": 0,
+            "article_id": 2
+          },
+          {
+            "type": "Header",
+            "text": "Getting inspiration",
+            "sort_order": 1,
+            "article_id": 2
+          },
+          {
+            "type": "Paragraph",
+            "text": "I set out to achieve a couple of things with this blog. Most of those things are centered around achieving little proof-of-concepts regarding technologies which I see as relevant. It’s mostly an outlet for me to be able to experiment on things in a risk free manner. What typically happens is that I will see some cool new pattern or technique via twitter or reddit. Reading programming articles can be pretty pointless unless you take the time to internalize the things you are reading about. One of the best ways to do that is something like this blog.",
+            "sort_order": 2,
+            "article_id": 2
+          },
+          {
+            "type": "Header",
+            "text": "Angular Concepts",
+            "sort_order": 3,
+            "article_id": 2
+          },
+          {
+            "type": "Paragraph",
+            "text": "Most of the things I set out to achieve on this blog are related to Angular best practices, such as: the component pattern, using a self-documenting file structure / naming scheme, nested views, controllerAs syntax, etc… Due to the nature of code best practices, they aren’t really evident when blogging the site as a typical user would. To get a sense for how I use them, Github is your best option. ",
+            "sort_order": 4,
+            "article_id": 2
+          },
+          {
+            "type": "Header",
+            "text": "General Concepts",
+            "sort_order": 5,
+            "article_id": 2
+          },
+          {
+            "type": "Paragraph",
+            "text": "One potential anti-pattern is learning only domain specific knowledge; for example, only learning concepts that purely apply to Angular. As we all know, Javascript is a wild beast; Angular could fall out of favor as just as fast as it became a preferred option for many. It can result in folks trying to apply what they know in other domains and having a hard time. It is always useful to spend some time developing general knowledge, even if it may be immediately not practical.",
+            "sort_order": 6,
+            "article_id": 2
+          },
+          {
+            "type": "Paragraph",
+            "text": "To that end, some generally good things I’m trying to implement on this blog are client-side data caching, token based authentication using JWTs, role based authorization, to mention a few. I also try to not rely on Angular concepts when writing my Javascript, such as abstaining from using $scope, or wrapping my Angular services with POJOs. At the time of writing this post, I have the client side caching implemented, and have JWT auth setup on the server; stay tuned for more posts on each individual subject.",
+            "sort_order": 7,
+            "article_id": 2
+          },
+          {
+            "type": "Paragraph",
+            "text": "It seems the creators of Angular are also prioritizing this approach, and seem to be making Angular 2 more general in implementation. For example, event based directives like ng-click have been completely removed due to a new clever way to bind to native browser events. They have gotten rid of something like 20+ directives.",
+            "sort_order": 8,
+            "article_id": 2
+          },
+          {
+            "type": "Paragraph",
+            "text": "A lot of folks in the Angular community seem to be upset over surface details (e.g. binding syntax) while not embracing a lot of the improvements made across the board. I certainly won’t be writing Angular 2 in production anytime soon but have been trying to learn basic javascript patterns. I’m sure they will translate.",
+            "sort_order": 9,
+            "article_id": 2
+          },
+          {
+            "type": "Header",
+            "text": "Personal objectives",
+            "sort_order": 10,
+            "article_id": 2
+          },
+          {
+            "type": "Paragraph",
+            "text": "I wanted to architect this blog in in a particular manner, with clear divides between client and server. This can result duplication of effort if you are not careful. I also wanted some flexibility over the layout of blog posts. I want the ability to insert photos where necessary and customize each blog post as I see fit.",
+            "sort_order": 11,
+            "article_id": 2
+          },
+          {
+            "type": "Paragraph",
+            "text": "It should also be somewhat simple to create and edit posts through the blog as well. I have yet to implement client side post create / edit, although I have most of the server side work in place. Currently all the data comes hard coded from the seed file. I have yet to settle over the fine details on how I want to go about implementing the above, but I’m sure you’ll hear about it when I figure it out! Thanks for reading, stay tuned for more. ",
+            "sort_order": 12,
+            "article_id": 2
+          }
+        ]
+      }
+    },
+    {
+      "article": {
+        "id": 3,
+        "date": "2015-06-29",
+        "title": "Server - Authorization",
+        "content": [
+          {
+            "type": "Image",
+            "sort_order": 0,
+            "article_id": 3
+          },
+          {
+            "type": "Header",
+            "text": "Rails with Token Auth",
+            "sort_order": 1,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "One of the big features I’ve always wanted for this blog are token based authentication. They fit in very well with my app architecture. I try to keep good API design principles in mind when building out my rails back end and token auth encourages good stateless API design.",
+            "sort_order": 2,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "Token auth is very much like an Epic pass at Breckenridge resorts. You are given a lift ticket (token), with which you can access the mountain (a protected resource), but before you do, you must have your ticket scanned in the lift line (validity of token). Most resorts scan your ticket at the base of each lift (Authorization header on each request).",
+            "sort_order": 3,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": " The analogy goes to the next level when you consider that an Epic pass will get you in the door in any Breckenridge owned ski-resort, much like how a signed token will permit you to access resources behind different servers, which are all owned by the same entity.  ",
+            "sort_order": 4,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "An API request should have everything the server needs to respond correctly. In this instance, since the token is provided by the client, the server doesn’t need to rely on session data to complete the request. If the token isn’t provided, the server knows that in advance, as it didn’t receive a token. ",
+            "sort_order": 5,
+            "article_id": 3
+          },
+          {
+            "type": "Header",
+            "text": "Managing State",
+            "sort_order": 6,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "It is true that you can store the token in session as a cookie on the client. This approach, in my opinion, diminishes the advantages of using token based auth in the first place. One of the many benefits of token auth is not having to create a session store (on the server) for each user. ",
+            "sort_order": 7,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "We use session store most often to keep relevant info (e.g. user id , or access level) about the user in between requests. We have do it this way because HTTP is a stateless protocol. There is a performance hit for the server maintaining a store for each user that is currently using your app. ",
+            "sort_order": 8,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "This is acceptable because of security concerns, and it is typically the policy to assume that the client cannot be trusted. Session stores beef up security because it is something that is done on the server, the cookie is acting like a key to decrypt your session data on the server. ",
+            "sort_order": 9,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "If you attempt to emulate token based auth by storing the token as session data (a cookie), then you’re missing the point of using tokens in the first place. We don’t need to server to store the relevant user data, as we can trust the payload in the signed token issued by our server. ",
+            "sort_order": 10,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "The token has to be decoded by the server anyway to verify its authenticity. This is a lot easier to do than deserialize session data for each request. Using cookies as tokens means you have to decode the token AND deserialize the session store for each request. And you can no longer scale up your app across multiple servers, as the session store will be different for each server that your app is coming from. ",
+            "sort_order": 11,
+            "article_id": 3
+          },
+          {
+            "type": "Header",
+            "text": "The Implementation",
+            "sort_order": 12,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "The relevant files are: <code>app/services/authenticate_user.rb, app/services/login_user.rb, app/controllers/auth_controller.rb, lib/token_handler.rb</code>. ",
+            "sort_order": 13,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": " The relevant  gems: <code>rack-cors, jwt, simple_command, bcrypt</code>",
+            "sort_order": 14,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "Rails has some very slick authentication options, one of them being devise. I opted not to use devise on this project as it is very robust and no longer supports token auth to my knowledge. Fortunately Rails has tight integration with a crypto tool called Bcrypt. Bcrypt basically encrypts your password before it is stored in the database so if someone were to compromise your dataset, they would only have access to encrypted usernames and passwords. ",
+            "sort_order": 15,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "If you are using Bcrypt, Rails will add a few nice methods to your user class if you declare this inside of the User class: <code>has_secure_password</code>. Specifically it gives you an :authenticate method to check the username / password of your users. ",
+            "sort_order": 16,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "<code>simpe_command</code> allows you to easily create service objects in ruby. I saw it in several tutorials regarding JWTs so I figured I’d give it a try. <code>rack-cors</code> gem is for easily enabling cross-origin-resource-sharing in the rails. ",
+            "sort_order": 17,
+            "article_id": 3
+          },
+          {
+            "type": "Header",
+            "text": "Flow: Token vs Session",
+            "sort_order": 18,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "The main difference in a token flow vs a session flor for auth is this: after you have authenticated your user, rather than setting their user_id to session data, you issue them a token with a payload that contains the user_id (and what ever else you deem relevant). ",
+            "sort_order": 19,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "In my <code>AuthController</code> you can see using the User service to sign in my users and issue them a token.",
+            "sort_order": 20,
+            "article_id": 3
+          },
+          {
+            "type": "Image",
+            "sort_order": 21,
+            "article_id": 3
+          },
+          {
+            "type": "Image",
+            "sort_order": 22,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "If you’re scanning the above code snippets you’re probably wondering about the <code>TokenHandler</code>. It actually is the meat of the app, in terms of token process. It basically exposes the functionality of the JWT gem by wrapping it in a PORO. Let’s take a look:",
+            "sort_order": 23,
+            "article_id": 3
+          },
+          {
+            "type": "Image",
+            "sort_order": 24,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "<code>:encode_auth_token, :decode_auth_token</code> are where most of the magic happens. The token is signed with the Rails application secret. The tutorial I followed used the salted password to sign the tokens for each user. I wonder what the benefits of that approach could be. I chose using the app secret because you can distribute it across rails apps and then each server can independently issue / verify tokens. ",
+            "sort_order": 25,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "According to the JWT standard, you can define a claims object to contain your payload. Currently there is no size limit, but since this is a response header I’d imagine keeping it as small as possible is ideal. There are a couple of required fields that the claims object must have, check out the JWT spec to learn about them. ",
+            "sort_order": 26,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "The claims object isn’t encrypted, although the spec has support for encrypted claims. The cryptographic aspect of JWTs has to do with verifying the authenticity of a token, and to do that the token signature is used. ",
+            "sort_order": 27,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "A important piece of the puzzle is in the <code>ApplicationController</code>. Rails has several hooks into the request lifecycle that serve as callbacks. I defined a <code>:authenticate</code> method in the <code>ApplicationController</code>, which is the parent to all other controllers. This method uses the <code>AuthenticateUser</code> service, which is responsible for checking the validity of a token and appending the token to the response for the client. ",
+            "sort_order": 28,
+            "article_id": 3
+          },
+          {
+            "type": "Image",
+            "sort_order": 29,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "To protect a resource, you use the <code>:before_action</code> filter and call the <code>:authenticate</code> method defined in your <code>ApplicationController</code>. Here is me protecting my create method on the articles resource:",
+            "sort_order": 30,
+            "article_id": 3
+          },
+          {
+            "type": "Image",
+            "sort_order": 31,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "in this instance, I’m only protected a single route / method, but you get the picture! ",
+            "sort_order": 32,
+            "article_id": 3
+          },
+          {
+            "type": "Header",
+            "text": "Wrap Up",
+            "sort_order": 33,
+            "article_id": 3
+          },
+          {
+            "type": "Paragraph",
+            "text": "That’s pretty much the life cycle of an authenticated request in my app. Be sure to stick around to see the follow up post on the client side!",
+            "sort_order": 34,
+            "article_id": 3
+          }
+        ]
+      }
+    },
+    {
+      "article": {
+        "id": 4,
+        "date": "2015-06-30",
+        "title": "Client -  Authorization",
+        "content": [
+          {
+            "type": "Image",
+            "sort_order": 0,
+            "article_id": 4
+          },
+          {
+            "type": "Header",
+            "text": "Angular and Json Web Tokens",
+            "sort_order": 1,
+            "article_id": 4
+          },
+          {
+            "type": "Paragraph",
+            "text": "In my previous post, I detailed how I setup JWT server side. This post details the implementation in the Angular client. In order to get this done, I used a User service (a factory), an Angular interceptor, and an AuthToken factory. If you are unfamiliar with Angular, factories and basically singletons, and an interceptor is just a factory as well. This code is on github, checkout the auth folder of githop.com repo for the souce files. ",
+            "sort_order": 2,
+            "article_id": 4
+          },
+          {
+            "type": "Paragraph",
+            "text": "The basic auth features I expect are the user logging in, persisting their issued token, appending it to the necessary HTTP requests, and the app should notify the user if they are logged in or not. I also want the app to remember if I’m logged in if I leave and return. Here’s how I used the services mentioned earlier to make it happen. ",
+            "sort_order": 3,
+            "article_id": 4
+          },
+          {
+            "type": "Header",
+            "text": "Token Concerns",
+            "sort_order": 4,
+            "article_id": 4
+          },
+          {
+            "type": "Paragraph",
+            "text": "The User service handles login and remembering the current user. The JWT payload contains data about the user, but must be decoded first. Once the User service is provided the token, it will decode it and store the payload data in the service. Since I’m storing the user data in a factory, it can be injected anywhere in the app where needed.",
+            "sort_order": 5,
+            "article_id": 4
+          },
+          {
+            "type": "Image",
+            "sort_order": 6,
+            "article_id": 4
+          },
+          {
+            "type": "Paragraph",
+            "text": "If the token is set in localStorage when the user returns to the site, the User server will honor it, making the user not have to log in again to get the token. ",
+            "sort_order": 7,
+            "article_id": 4
+          },
+          {
+            "type": "Image",
+            "sort_order": 8,
+            "article_id": 4
+          },
+          {
+            "type": "Paragraph",
+            "text": "The AuthToken factory is basically a setter / getter for the token with localStorage, simple enough.\n",
+            "sort_order": 9,
+            "article_id": 4
+          },
+          {
+            "type": "Image",
+            "sort_order": 10,
+            "article_id": 4
+          },
+          {
+            "type": "Paragraph",
+            "text": "Angular interceptors allow you to manipulate the request / response headers that $http handles. There are 4 methods available, request / response and error handlers for each. I’m only using the request handler at the moment. I use some logic to only apply the request to the articles resource that are going to mutate the database; i.e., non-idempotent stuff. Also, no sense in authenticate our async template requests.",
+            "sort_order": 11,
+            "article_id": 4
+          },
+          {
+            "type": "Header",
+            "text": "Informing the User",
+            "sort_order": 12,
+            "article_id": 4
+          },
+          {
+            "type": "Paragraph",
+            "text": "I use a particular setup with ui-router to provide a “layout” page for my templates, it takes advantage of nested views and absolutely named views. I have a single entry point of the app (a ui-view,  in index.html) which leads to a layout template (shell.tmpl.html) where the app is actually rendered.",
+            "sort_order": 13,
+            "article_id": 4
+          },
+          {
+            "type": "Image",
+            "sort_order": 14,
+            "article_id": 4
+          },
+          {
+            "type": "Paragraph",
+            "text": "The named views are the nav section and body section. The nav template is always shown, and when you are browsing the blog. In typical nav fashion, all the site navigation links are contained within. The body section is a ui-view where the individual pages of the site are injected. This setup reduces copying code as I don’t have use an ng-include for the nav template or copy into the necessary templates. More importantly, ui-router allows absolute views to have their own controllers which, coupled with controller scope inheritance, can be very useful. ",
+            "sort_order": 15,
+            "article_id": 4
+          },
+          {
+            "type": "Paragraph",
+            "text": "Since my entire app is pumped through these 2 named views, the layout template (shell.tmpl.html) provides a globally accessible point for me to provide data other templates throughout the whole app. The layout template is registered to the HomeCtrl, which is where I inject my User service and house my login logic.",
+            "sort_order": 16,
+            "article_id": 4
+          },
+          {
+            "type": "Image",
+            "sort_order": 17,
+            "article_id": 4
+          },
+          {
+            "type": "Paragraph",
+            "text": "This makes it so I can access my current user basically anywhere in the app, as the Home state is somewhat of a root state.",
+            "sort_order": 18,
+            "article_id": 4
+          },
+          {
+            "type": "Header",
+            "text": "Wrap Up",
+            "sort_order": 19,
+            "article_id": 4
+          },
+          {
+            "type": "Paragraph",
+            "text": "Right now, I have everything in place to actually take advantage of an authorized user flow, although there is no aspect in my blog that currently uses it. This is because the blog is under heavy development, and at the moment I have yet to settle on exactly how I want to implement the create and edit aspects of the blog process, which you would need to have proper access to do. ",
+            "sort_order": 20,
+            "article_id": 4
+          },
+          {
+            "type": "Paragraph",
+            "text": "When I wrote this post, all the blog post data is still being hard coded into the rails seed file, which is fine, as a big purpose of this blog has to do with consuming JSON from a restful resource. My next post will detail how I do client side data modeling. Thanks for reading and stay tuned for updates! ",
+            "sort_order": 21,
+            "article_id": 4
+          }
+        ]
+      }
+    },
+    {
+      "article": {
+        "id": 5,
+        "date": "2015-07-07",
+        "title": "Data - Client",
+        "content": [
+          {
+            "type": "Image",
+            "sort_order": 0,
+            "article_id": 5
+          },
+          {
+            "type": "Header",
+            "text": "ActiveModel::Serializers",
+            "sort_order": 1,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "On the server side, this blog users rails-api with a gem called ActiveModel::Serializers. AMS is for serialization of ActiveRecord objects. AMS allows for serializers to be defined that give you control over the final json schema. It will also handle relations and embed the necessary hierarchy into the final json object.",
+            "sort_order": 2,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "I first used it in another app of mine, padded pockets, but it has been updated since then. One of the new features available is swappable adapters. The default adapter will more or less resemble the output of calling <code>:to_json</code> on a basic model with no included relations.",
+            "sort_order": 3,
+            "article_id": 5
+          },
+          {
+            "type": "Header",
+            "text": "JSON:API",
+            "sort_order": 4,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "I mention all of this only because this is where I heard about the JSON:API spec. It is designed to standardize the format of a JSON response. It’s similar to HAL, but is more clever in its design to allow to fancy client side data caching. After reading the spec and seeing who the authors were, I decided to give it a try for this particular app. ",
+            "sort_order": 5,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "The spec is at version 1.0 and is considered stable, although AMS does not do a good job adhering to the spec. The spec requires that all responses consist of three things, a links object for navigation, a data array for the primary resource and an included array for any related resources. ",
+            "sort_order": 6,
+            "article_id": 5
+          },
+          {
+            "type": "Image",
+            "sort_order": 7,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "One thing I noticed is that all resources have uniform format as well. In JSON:API, a resource object has the following attributes: type, id, attributes, and relationships. Attributes and relationships are objects themselves with a uniform format.",
+            "sort_order": 8,
+            "article_id": 5
+          },
+          {
+            "type": "Image",
+            "sort_order": 9,
+            "article_id": 5
+          },
+          {
+            "type": "Header",
+            "text": "Flat Json",
+            "sort_order": 10,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "By default AMS will serialize a simple one-to-many relation by embedding the related objects into an array of objects inside the parent node. At first this is the approach I preferred, as it is the easiest setup to ng-repeat over for an Angular client. Using JSON:API spec, I am still heavily manipulating the response to make it nice to use in my templates. ",
+            "sort_order": 11,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "I figure this is because the prime driver behind JSON:API spec is EmberJs. The latest version of EmberData is using the spec by default. There is already one angular module I saw related to JSON:API but I decided to use my own implementation.",
+            "sort_order": 12,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "When you can count on a uniform format of the json response it makes it easier to recreate the same data model on the client. All resources have an id and type attribute, and the data you are after is either in the primary resource or in the <code>included</code> array. Objects in the <code>included</code> array have the same attributes as the primary resource. ",
+            "sort_order": 13,
+            "article_id": 5
+          },
+          {
+            "type": "Header",
+            "text": "Benefit",
+            "sort_order": 14,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "This means that if you are requesting a collection or single resource from your server you will get the exact same json back every time. The downside is that you have to do a lot of work to handle the data on the client side to rebuild the data model for easy use. Using the JSON:API spec initially took more effort for me, but the it soon became worth the effort.  ",
+            "sort_order": 15,
+            "article_id": 5
+          },
+          {
+            "type": "Header",
+            "text": "Code and Tell",
+            "sort_order": 16,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "To take advantage JSON:API I used a few custom services: <a href=https://github.com/githop/githop.com/blob/master/src/app/home/blog/blogpost.model.js>blogpost.model.js</a> and <a href=https://github.com/githop/githop.com/blob/master/src/app/home/blog/posts.srv.js>posts.srv.js</a>. They are both Angular factories but the naming convention in use shows what they do. The BlogPost model is for storing data for a single post. The Posts service is for getting posts from the server and turning them into BlogPost instances to be cached.",
+            "sort_order": 17,
+            "article_id": 5
+          },
+          {
+            "type": "Header",
+            "text": "Posts Service",
+            "sort_order": 18,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "The Posts service exposes four methods:<code>  getPool(), getArticle(), loadAll(), setArticle() </code>. After any resource has been requested, it’s cached inside the Posts service for use later. <code>getPool()</code> returns what is in the cache. The rest of the methods are responsible for populating the cache or using the cache to return a resource without requesting it from the server. ",
+            "sort_order": 19,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "<code>loadAll()</code> returns a Promise which resolves to an array of BlogPost instances from the server. It will also cache each instance as they come in from the server.",
+            "sort_order": 20,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "<code>getArticle()</code> returns a Promise that resolves to a single post from the cache, or will request and cache it from the server. ",
+            "sort_order": 21,
+            "article_id": 5
+          },
+          {
+            "type": "Header",
+            "text": "Order of Operations",
+            "sort_order": 22,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "The way I use these methods with the app architecture allows some slick benefits, such as no http requests after the initial posts load. Since I’m storing data in services rather than controllers, I can inject them into the necessary controller and have access to the methods exposed.",
+            "sort_order": 23,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "When a user clicks on the blog link, the BlogCtrl will fire up and fetch the cache from the Posts serice. The Post service has an init function which gets all posts from the server and caches them.",
+            "sort_order": 24,
+            "article_id": 5
+          },
+          {
+            "type": "Image",
+            "sort_order": 25,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "When a user clicks on a blog post, the PostCtrl will fire up and fetch the individual post from the cache. PostCtrl is fed route params from ui-router and uses them to know which post to grab from the cache.",
+            "sort_order": 26,
+            "article_id": 5
+          },
+          {
+            "type": "Image",
+            "sort_order": 27,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "If you browse my blog with your network tab open, you’ll notice that after the initial request to the <code>/articles</code> resource on the rails server, no more data requests are made from that point on.",
+            "sort_order": 28,
+            "article_id": 5
+          },
+          {
+            "type": "Header",
+            "text": "Wrap Up",
+            "sort_order": 29,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "There isn’t a clearly defined community solution to modeling data on the client with Angular. I’ve seen a lot of approaches on the blogosphere regarding ways to make it happen. I more or less used a mash up of what I liked from several blog posts, plus the typical custom tweaking to fit my needs. ",
+            "sort_order": 30,
+            "article_id": 5
+          },
+          {
+            "type": "Paragraph",
+            "text": "I currently don’t have enough posts to start paginating my requests, but I think the JSON:API will make implementing pagination simple when the time comes. Thanks for stopping by, stay tuned for updates!",
+            "sort_order": 31,
+            "article_id": 5
+          }
+        ]
+      }
+    },
+    {
+      "article": {
+        "id": 6,
+        "date": "2015-07-11",
+        "title": "Sentiment Analysis",
+        "content": [
+          {
+            "type": "Image",
+            "sort_order": 0,
+            "article_id": 6
+          },
+          {
+            "type": "Header",
+            "text": "Challenge Accepted",
+            "sort_order": 1,
+            "article_id": 6
+          },
+          {
+            "type": "Paragraph",
+            "text": "In a recent job application I encountered one of the more interesting screening techniques used by companies. They gave me a take home challenge to code. The challenge was to write a simple command line program that would search twitter by a given keyword for tweets, and then derive the overall sentiment of each tweet.",
+            "sort_order": 2,
+            "article_id": 6
+          },
+          {
+            "type": "Image",
+            "sort_order": 3,
+            "article_id": 6
+          },
+          {
+            "type": "Paragraph",
+            "text": "After some time, I decided to revisit my solution and implement the core algorithm into my blog. You can even give it a try yourself at the top of this post! I’ve since analyzed all the posts in my blog and incorporated the results at the beginning of each post. The rest of this post is about my text sentiment algorithm.",
+            "sort_order": 4,
+            "article_id": 6
+          },
+          {
+            "type": "Paragraph",
+            "text": "Sentiment analysis is pretty fancy sounding, but the solution (in this case) was actually very simple. If you have a list of words with their sentiments, the challenge at this point is basically a lookup problem. Fortunately I was provided a 6k list of words and sentiments in CSV format.",
+            "sort_order": 5,
+            "article_id": 6
+          },
+          {
+            "type": "Image",
+            "sort_order": 6,
+            "article_id": 6
+          },
+          {
+            "type": "Paragraph",
+            "text": "The CSV dictionary is pretty much the only thing I used from the original challenge for my blog implementation.",
+            "sort_order": 7,
+            "article_id": 6
+          },
+          {
+            "type": "Paragraph",
+            "text": "In this context, a word can potentially be one of three sentiments: positive, negative, or neutral. The sentiment of a body of text is based upon the sentiments of each word which it is composed of. Here’s basically how my algorithm works: ",
+            "sort_order": 8,
+            "article_id": 6
+          },
+          {
+            "type": "Header",
+            "text": "Algorithm",
+            "sort_order": 9,
+            "article_id": 6
+          },
+          {
+            "type": "Paragraph",
+            "text": "<ol>\n<li>Search dictionary for each word of input text</li>\n<li>derive sentiments of search results</li>\n<li>tally overall sentiment from individual sentiments</li>\n</ol>",
+            "sort_order": 10,
+            "article_id": 6
+          },
+          {
+            "type": "Header",
+            "text": "Implementation",
+            "sort_order": 11,
+            "article_id": 6
+          },
+          {
+            "type": "Paragraph",
+            "text": "To make the above happen in my rails app I used a custom class called <a href=\\https://github.com/githop/blg_api_digitalocean/blob/master/lib/dictionary_handler.rb\\” target=\\”_blank\\”>DictionaryHandler<\\/a>. It houses all the sentiment analysis logic. Provide it with a dictionary and string of words and it will handle analyzing the sentiment of those words.",
+            "sort_order": 12,
+            "article_id": 6
+          },
+          {
+            "type": "Paragraph",
+            "text": "It accepts a hash on initialization, which is provided from parsing the CSV dictionary I mentioned earlier. I’m pretty certain that my rails app will parse the CSV when it initializes, and from that point on, the dictionary is stored in memory. I’m not sure if this is poor form, but I’m using a global variable to expose a single instance of the DictionaryHandler for use throughout the app.",
+            "sort_order": 13,
+            "article_id": 6
+          },
+          {
+            "type": "Paragraph",
+            "text": "After I used the DictionaryHandler on my own blog posts, I figured I had to make an interactive blog post where the user could submit their own arbitrary text for analysis, and that is what you see at the top of this post.",
+            "sort_order": 14,
+            "article_id": 6
+          },
+          {
+            "type": "Header",
+            "text": "Wrap Up",
+            "sort_order": 15,
+            "article_id": 6
+          },
+          {
+            "type": "Paragraph",
+            "text": "As always, you can check out the code for this blog on github, enjoy! I hope you enjoyed this post; I sure did creating it ;).",
+            "sort_order": 16,
+            "article_id": 6
+          }
+        ]
+      }
+    },
+    {
+      "article": {
+        "id": 7,
+        "date": "2015-07-14",
+        "title": "Posts: Behind the Scenes",
+        "content": [
+          {
+            "type": "Image",
+            "sort_order": 0,
+            "article_id": 7
+          },
+          {
+            "type": "Header",
+            "text": "How Posts are made here",
+            "sort_order": 1,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "When it comes to making blog posts there were a few features I wanted this blog to have. This app is setup as a JSON server / Javascript MVC client. This approach has several benefits, however there are also constraints imposed from client side templating.",
+            "sort_order": 2,
+            "article_id": 7
+          },
+          {
+            "type": "Header",
+            "text": "Templates on the Client",
+            "sort_order": 3,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "One key feature I wanted was the ability to insert an image at any point in the blog post content. I typically use images for screen grabs of code I’m describing. This would be hard to implement if I were using the same template and simply iterating over JSON to display posts, since in my JSON schema, images and posts are in separate collections",
+            "sort_order": 4,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "My solution is to use a unique template for each blog post. The downside is that each post requires a hand built template; this spurred me to create some directives that make the process easier.",
+            "sort_order": 5,
+            "article_id": 7
+          },
+          {
+            "type": "Header",
+            "text": "Directive: <my-para></my-para>",
+            "sort_order": 6,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "I setup my data in a particular way such that a paragraph is a child of a header. The <my-para> directive takes in three inputs, the header object, and start/stop integers to act as upper and lower bounds for iterating.",
+            "sort_order": 7,
+            "article_id": 7
+          },
+          {
+            "type": "Image",
+            "sort_order": 8,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "This is basically my solution to allow for images to be placed at any point in the post. I simply slice up the array of paragraphs with this directive, insert an image where necessary, then continue on with the rest of the post. I use a few other directives in my posts; e.g. the sentiment analysis box is also a directive.",
+            "sort_order": 9,
+            "article_id": 7
+          },
+          {
+            "type": "Image",
+            "sort_order": 10,
+            "article_id": 7
+          },
+          {
+            "type": "Header",
+            "text": "Posts on the Server",
+            "sort_order": 11,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "I use 4 SQL tables to model posts on my server: articles, imgs, headers, and paragraphs. An article has many images and headers, a header has many paragraphs. In terms of actually creating posts on the server, I think my solution is actually pretty neat.",
+            "sort_order": 12,
+            "article_id": 7
+          },
+          {
+            "type": "Image",
+            "sort_order": 13,
+            "article_id": 7
+          },
+          {
+            "type": "Header",
+            "text": "Creating posts - Client",
+            "sort_order": 14,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "I actually author my blog posts on Google Docs. I mentioned in my Client series intro post that I was using the rails seed file to add new posts. That involved a lot of manual work on my end, and essentially storing my data in the seed file (check it out on github). I didn’t mind manually inputting data because I needed JSON to consume for the client and I wasn’t certain how I was going to implement the client side crud process either. ",
+            "sort_order": 15,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "One idea I had was to use a series of forms that the user could build out, and simply add forms for each header / paragraph as necessary. I decided against this approach as it would still result in me copy / pasting from a Google Doc into a form input. ",
+            "sort_order": 16,
+            "article_id": 7
+          },
+          {
+            "type": "Header",
+            "text": "Upload Text File?",
+            "sort_order": 17,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "I considered just downloading my google doc as a text file, and uploading it as a text file to later be parsed by the rails server for creating all the posts. I was in the mood for text parsing as I thought of this idea around the time I was working on my sentiment analysis algo. This idea fell out of favor with me because I realized I would need to make some sort of basic syntax for my text files to ease the parsing, and did not want to get into file uploading either. ",
+            "sort_order": 18,
+            "article_id": 7
+          },
+          {
+            "type": "Header",
+            "text": "Posts on Google Docs",
+            "sort_order": 19,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "I’ve mentioned a few times by now that I use Google Docs to author my blog posts. Well, it turns out you can actually make a POST request from a Google Doc; you may see where I’m going with this ;) ",
+            "sort_order": 20,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "I’ve used a little known tool called Google Apps Script in the past. It’s actually in GAS where I first used code to build something meaningful. I also own my own Google Apps account. I ended up creating a custom google doc extension for my personal google apps domain. It is pretty nice as it now comes installed on all my new docs. Since I’m using Json Web Tokens for server authentication, I simply wrote a few scripts to login to my server, persist my auth token in GAS, and a script to parse a google doc for my article content and submit a post request to my server to actually create the post.",
+            "sort_order": 21,
+            "article_id": 7
+          },
+          {
+            "type": "Image",
+            "sort_order": 22,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "I still have to hand built HTML templates as I mentioned before, but this approach seems to be working pretty well for me. My post content is curated and archived on Google Docs so it removes one step from my process of actually getting content into my blog. ",
+            "sort_order": 23,
+            "article_id": 7
+          },
+          {
+            "type": "Header",
+            "text": "Wrap Up",
+            "sort_order": 24,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "I enjoy the flexibility granted when using individual templates for each post, but I’m exploring ways to get rid of this step in the process as well. Ideally, I want to be able to create posts and have the content marked up automatically. One thing I’m exploring as a solution is creating some sort of “document index” shared between the client and server, and the client would use the index to derive the post structure and lay out the content. ",
+            "sort_order": 25,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "I still don’t have a solid solution for editing my posts. One constraint I have with my current setup is it would be very difficult to alter the structure of a post after it has been created. I could easily edit individual paragraphs / headers, but changing the document structure/order by adding/removing reordering paragraphs or headers would cause problems. I currently use the ID of an object as its index in the document structure, so reordering items would be problematic.",
+            "sort_order": 26,
+            "article_id": 7
+          },
+          {
+            "type": "Paragraph",
+            "text": "A shared document index may turn out to solve both of my problems above, currently I’m still conceptually feeling it out as to how I would implement it. Thanks for stopping, by stay tuned for updates! ",
+            "sort_order": 27,
+            "article_id": 7
+          }
+        ]
+      }
+    },
+    {
+      "article": {
+        "id": 8,
+        "date": "2015-07-20",
+        "title": "PerfMatters",
+        "content": [
+          {
+            "type": "Image",
+            "sort_order": 0,
+            "article_id": 8
+          },
+          {
+            "type": "Header",
+            "text": "Performance at githop.com",
+            "sort_order": 1,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "I try to keep performance in mind when I’m building things. When it comes to web applications, there are opportunities to speed things up all along the stack. Here are some things I’ve done to keep things quick on githop.com",
+            "sort_order": 2,
+            "article_id": 8
+          },
+          {
+            "type": "Header",
+            "text": "Architecture Overview",
+            "sort_order": 3,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "Before we get started, I should mention that this entire site is running on DigitalOcean droplet with 1 CPU core and 1Gb of ram. I use Ubuntu Server 14.04 as my OS. To connect my Rails app to the web, I use nginx as a proxy server. I use Rails as an API and static file server, which serves the Angular client app (which consumes the API).",
+            "sort_order": 4,
+            "article_id": 8
+          },
+          {
+            "type": "Header",
+            "text": "Proxy Server",
+            "sort_order": 5,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "A proxy server stands between the internet and the application it is proxying. Think of it like a bouncer outside of a bar. For managing sites, nginx shadows the apache convention of using a sites-available directory to manage individual websites. Each site is sym-linked to a sites-enabled directory, which is then used for actual configuration. Global config for nginx is in a file called nginx.conf.",
+            "sort_order": 6,
+            "article_id": 8
+          },
+          {
+            "type": "Header",
+            "text": "NGINX Perf tweaks",
+            "sort_order": 7,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "from nginx.conf:",
+            "sort_order": 8,
+            "article_id": 8
+          },
+          {
+            "type": "Image",
+            "sort_order": 9,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "The rule of thumb is one worker process per CPU core, so 1 in my case. Since I’m using only 1 worker process, I change the default worker_connections from 768 to the max of 10240. Epoll is a better type of polling for the particular distro of linux I’m using. ",
+            "sort_order": 10,
+            "article_id": 8
+          },
+          {
+            "type": "Image",
+            "sort_order": 11,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "Here I setup nginx to proxy static content from the rails app. This should cut down on requests to the rails app, and make a shorter round trip for the client.",
+            "sort_order": 12,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "In addition to caching assets, I also compress them using Gzip.",
+            "sort_order": 13,
+            "article_id": 8
+          },
+          {
+            "type": "Header",
+            "text": "Application Tier",
+            "sort_order": 14,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "Rails is known more for its speed of development, rather number of concurrent requests it can handle. To that end I use a subset of rails called rails-api that is slightly more performant for making APIs. I also keep my queries quick, ensuring they are not n+1 and eagerly loaded. The most expensive request is around 500ms, and that is for my entire blog index.",
+            "sort_order": 15,
+            "article_id": 8
+          },
+          {
+            "type": "Header",
+            "text": "Client Tier",
+            "sort_order": 16,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "I try to use a combination of a solid build process and good practices to keep my Angular app performant. In build process terms, I use gulp to concat and minify all my source files into single files.",
+            "sort_order": 17,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "Angular has some pretty clever tricks for handling templates efficiently. It loads templates asynchronously and caches them in the $templateCache. You can take advantage of this and preload your HTML templates into the $templateCache; this way they are already available and do not need to be requested async. I also use a tool to revision my file names in a manner so they can be cached by the browser.",
+            "sort_order": 18,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "In terms of best practices, you won’t find any use of $watch, $broadcast, or any of the other temptations Angular offers which I consider anti-patterns. My controllers are slim, most of the functionality of my app is contained in services or models.",
+            "sort_order": 19,
+            "article_id": 8
+          },
+          {
+            "type": "Header",
+            "text": "Benchmarks",
+            "sort_order": 20,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "A great tool for benchmarking webapps is webpagetest.org. They provide a nifty metric called Speed Index. It’s designed to measure the time it takes for content to show up on a page. It’s defined as, “The Speed Index is the average time at which visible parts of the page are displayed.  It is expressed in milliseconds and dependent on size of the view port.” ",
+            "sort_order": 21,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "WebPageTest.org gives you several combiations of devices / connections speeds to see how your app performs across a specturm. Here are some of my results: (lower is better)",
+            "sort_order": 22,
+            "article_id": 8
+          },
+          {
+            "type": "Image",
+            "sort_order": 23,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "On a desktop with 5Mbps cable connection, my Speed Index is 1594, which makes me just shy of the 10th percentile, but pretty legit! You can see the page is fully loaded within 5 seconds (first view in 1.5 seconds), takes 21 requests and is < 2mb in size.",
+            "sort_order": 24,
+            "article_id": 8
+          },
+          {
+            "type": "Image",
+            "sort_order": 25,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "The same setup with a slower connection, 1.5 Mbps DSL yields a speed index of 3024.",
+            "sort_order": 26,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "On a mobile device (Moto 3g) with 3g connection, my Speed Index is 5197. Pretty impressive, considering that the average Speed Index for a desktop with a DSL connection is 5408",
+            "sort_order": 27,
+            "article_id": 8
+          },
+          {
+            "type": "Header",
+            "text": "Results",
+            "sort_order": 28,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "I use imgur to host my images, which explains why the image score is so low. Since all my assets are bundled up in a few files, the initial download is intense. This can be problematic for mobile devices with poor connections. The flip side is that for poor connections, after you have the app, the experience from that point on is great. This is why I’ve spent so much time trying to cache resources both on the server and browser. ",
+            "sort_order": 29,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "One thing I’d like to note is the repeat view time. Preloading the $templateCache with all your HTML and using models to cache the data client allows for a huge win: after you download the initial client app and get the resources from the API, the app effectively works offline from that point on. It will not make any additional HTTP requests, everything is available locally.",
+            "sort_order": 30,
+            "article_id": 8
+          },
+          {
+            "type": "Header",
+            "text": "Wrap Up",
+            "sort_order": 31,
+            "article_id": 8
+          },
+          {
+            "type": "Paragraph",
+            "text": "There is still healthy room for improvement, although I’m pretty satisfied with my results as they are. One thing I could do to easily bump things up would be to use a CDN for Angular and my images. Overall, it seems my web application is faster than average; which I’m very proud of considering that it is mostly custom built.",
+            "sort_order": 32,
+            "article_id": 8
+          }
+        ]
+      }
+    },
+    {
+      "article": {
+        "id": 9,
+        "date": "2015-08-03",
+        "title": "ES6",
+        "content": [
+          {
+            "type": "Image",
+            "sort_order": 0,
+            "article_id": 9
+          },
+          {
+            "type": "Header",
+            "text": "Using ES6 on githop.com",
+            "sort_order": 1,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "ES6 is finally a thing, or rather ES2015 is a thing. In any event the highly anticipated new language features have been solidified and the work on the standard is done. It will be some time before the features are fully implemented across all browsers, so taking advantage of ES6 today requires use of a transpiler in your build process.",
+            "sort_order": 2,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "I decided to take the plunge into ES6, so I went ahead and rewrote this blog in ES6. I ended up changing a lot in order to update to ES6. I used a new repo for my ES6 code so you can compare the ES5 / ES6 versions. Despite the extra tools needed to use the latest JavaScript, my overall build process / development flow is actually more simple now.",
+            "sort_order": 3,
+            "article_id": 9
+          },
+          {
+            "type": "Header",
+            "text": "Build Process Update",
+            "sort_order": 4,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "When I originally built this app, I used the gulp-angular Yeoman generator. Yeoman is very nice, and even will configure a transpiler for you. I’ve learned a lot by reading source of several generators, but I decided against using yeoman this time around.",
+            "sort_order": 5,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "One feature of ES6 that was a big reason for me updating my build process is JS modules. There have been third party solutions available for making modular JS apps for some time. There are actually quite a few third party options available, and one of them may be popular in the JS community for a period of time before being replaced by a newer hipper alternative.",
+            "sort_order": 6,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "Angular provides a module system, so using a third party module system on top of Angular can add unnecessary complexity as well. The good news is that with ES6 now being official, we are beginning to see consolidation around the standard rather than a particular third party solution.",
+            "sort_order": 7,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "Eventually, we’ll be able to package up our code into native ES6 modules, and skip the build process all together;  browsers will be able to use our modules natively. A welcome advance and huge win for the web. Until then we still have to several tools to get the job done. ",
+            "sort_order": 8,
+            "article_id": 9
+          },
+          {
+            "type": "Header",
+            "text": "Last Package Manager?",
+            "sort_order": 9,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "I decided to use SystemJS and JSPM for this project. JSPM is awesome. It is by far the best experience I’ve had with a JS build tool and replaces several other tools outright. It is also very fast and quickly gaining popularity in the community. I definitely recommend you give it a try for your next project. ",
+            "sort_order": 10,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "SystemJS is module loader that is compatible with native ES6 modules in addition to all of the third party module solutions as well. It’s billed as universal dynamic module loader.",
+            "sort_order": 11,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "JSPM is the package manager for SystemJS modules. It can use NPM, Github, or Bower as sources for packages and will handle installing, including, and resolving dependencies in your project.",
+            "sort_order": 12,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "JSPM also includes a transpiler out of the box. I decided to go with Babel for this project, as it seems a little easier to config and get running than TypeScript.",
+            "sort_order": 13,
+            "article_id": 9
+          },
+          {
+            "type": "Header",
+            "text": "ES6 and Angular 1.4",
+            "sort_order": 14,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "I mentioned that Angular provides a module system, so why go through all of this trouble? I wanted to begin using ES6, and Angular’s module system is going away in the next version in favor of native modules. You still have to use the angular module system, although using ES6 modules and with Angular works well. ",
+            "sort_order": 15,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "My current app is already separated into several angular modules, so it was pretty straight forward to convert it to ES6. I spent most of my time learning how to use ES6 import syntax. The basic pattern is to wrap your Angular code in an ES6 module, export it, then it can later be registered with an Angular module in the config function. ",
+            "sort_order": 16,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "It’s an Angular best practice to use a named function when defining things (controller, directive, service, etc..). I no longer do this as ES6 allows you to export regular functions or classes as modules. This pattern is actually very elegant. It makes it obvious what each Angular module needs and is responsible for.",
+            "sort_order": 17,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "HTML templates can be imported and given to Angular as plain text. You can define templates inline with Angular using <code>template:</code>. In this manner, you can import your HTML template as text and pass it to <code>template:</code>. CSS is also imported as well. Here is my Resume Module where you can see what some of this stuff looks like. ",
+            "sort_order": 18,
+            "article_id": 9
+          },
+          {
+            "type": "Image",
+            "sort_order": 19,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "The best part is that SystemJS will handle sorting out your import / export statements and, for production, will output a single executable file after everything is said and done. The final file can be minified and what you are left with is a single javascript file that includes all your app and all of its assets, including HTML and CSS. ",
+            "sort_order": 20,
+            "article_id": 9
+          },
+          {
+            "type": "Image",
+            "sort_order": 21,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "When in development, you configure browser-sync to serve your JSPM packages directly. SystemJS will import Angular.",
+            "sort_order": 22,
+            "article_id": 9
+          },
+          {
+            "type": "Image",
+            "sort_order": 23,
+            "article_id": 9
+          },
+          {
+            "type": "Header",
+            "text": "Angular DI and Minification",
+            "sort_order": 24,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "In order to provide the necessary dependencies for Angular you have to inject them into your services, controllers, etc.. When using an ES6 class as a controller, you can use the constructor function to pass dependencies to the controller.",
+            "sort_order": 25,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "When defining a service or anything else, simply pass the necessary dependencies into the function you are exporting. ",
+            "sort_order": 26,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "The last step is to make sure to include the necessary statements for <code>ng-annotate</code> to get its work done. I believe the typical syntax of using a code comment such as: <code>/*@ngInject*/</code> will not work with Babel as I hear it does not preserve comments. Fortunately you can use a string literal to let <code>ng-annotate</code> know which functions to handle. Here is a controller where you can see this in action: ",
+            "sort_order": 27,
+            "article_id": 9
+          },
+          {
+            "type": "Image",
+            "sort_order": 28,
+            "article_id": 9
+          },
+          {
+            "type": "Header",
+            "text": "Wrap Up",
+            "sort_order": 29,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "Initially I was put off from trying out ES6 because I was not certain as to how to handle the necessary transpilation step in the process. I originally wanted to use TypeScript but have heard a lot of bad feedback about having to provide type definitions for everything. I also have used Angular with third party module solutions (RequireJS) and it was not worth the effort in my opinion. I had also become very familiar with using bower with wiredep to automatically install dependencies into your project.",
+            "sort_order": 30,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "I was originally looking at webpack as it helps with Babel and handling templates with Angular but it seems that JSPM is the way to go. It does basically everything webpack does, in addition it also does everything that bower and NPM can do as well. JSPM and NPM play well together and even use the same <code>package.json</code> file.",
+            "sort_order": 31,
+            "article_id": 9
+          },
+          {
+            "type": "Paragraph",
+            "text": "My final build is a lot smaller way less complex as it is not a yeoman generator. I was inspired by the NG6 seed project to build this. I did not use the seed directly but the build process gulp tasks are basically the same. I added a few extra gulp tasks to handle some appcache stuff and a few custom executable scripts to deploy the app. As always, the code for this is on github. Thanks for reading and stay tuned for updates!",
+            "sort_order": 32,
+            "article_id": 9
+          }
+        ]
+      }
+    },
+    {
+      "article": {
+        "id": 10,
+        "date": "2015-10-02",
+        "title": "AeroPress Expresso",
+        "content": [
+          {
+            "type": "Image",
+            "sort_order": 0,
+            "article_id": 10
+          },
+          {
+            "type": "Header",
+            "text": "Background",
+            "sort_order": 1,
+            "article_id": 10
+          },
+          {
+            "type": "Paragraph",
+            "text": "In my personal history with coffee, I am not typically the person making the coffee. I usually drink coffee at work or at a cafe. I have never really had a coffee maker and coffee still is not part of my daily routine. I usually only drink coffee when I’m trying to be productive with my time.",
+            "sort_order": 2,
+            "article_id": 10
+          },
+          {
+            "type": "Paragraph",
+            "text": "At the end of the day, it makes way more sense to be producing your own coffee. It is cheaper to make it yourself, and learning a skill or craft that can yield something worth paying for, in this case coffee (which I usually buy), is a good use of time. ",
+            "sort_order": 3,
+            "article_id": 10
+          },
+          {
+            "type": "Paragraph",
+            "text": "Coffee, like beer or wine, has its own culture and body of knowledge to delve into, and in turn sustains an industry due to these things as well. There is no shortage of web content regarding the process of brewing coffee, (here I am adding to it) so when I wanted to begin taking more ownership over my coffee consumption, the web was a natural place to start my research.",
+            "sort_order": 4,
+            "article_id": 10
+          },
+          {
+            "type": "Header",
+            "text": "Good ingredients",
+            "sort_order": 5,
+            "article_id": 10
+          },
+          {
+            "type": "Paragraph",
+            "text": "Like anything else, using quality components and craftsmanship typically results in a good end product. For coffee, this boils down to three things: the beans you use and how you grind them, lastly the quality of water in the brew process.",
+            "sort_order": 6,
+            "article_id": 10
+          },
+          {
+            "type": "Paragraph",
+            "text": "I mention the above three things as the most basic parts to a good cup of coffee, as everything else that could influence your experience with the coffee is ultimately subjective. Varying the amount of coffee used, the size of the grind, temperature of the water, length of brewing time will and many other aspects influence the experience and taste of coffee.",
+            "sort_order": 7,
+            "article_id": 10
+          },
+          {
+            "type": "Paragraph",
+            "text": "I would imagine that even the same beans can have a range of taste profiles when changing the size of ground or other aspects of the brewing process. There are many sources of uncertainty to consider when brewing coffee, because of this, my approach to coffee is influenced by the scientific method. I try to be mindful of the things I’m varying when brewing coffee and how they may be affecting my ultimate experience of a particular cup. ",
+            "sort_order": 8,
+            "article_id": 10
+          },
+          {
+            "type": "Header",
+            "text": "Repeatable Process",
+            "sort_order": 9,
+            "article_id": 10
+          },
+          {
+            "type": "Paragraph",
+            "text": "My approach to coffee is like UNIX philosophy: use small composable parts, each responsible for doing a certain thing well, to produce a more complex sum of those parts.  Fortunately, quality coffee hardware can be had for relatively cheap. I spent the bulk of my money on a quality grinder. For brewing coffee, I prefer the AeroPress. It allows fine control over all the relevant aspects of the brewing process; I admire its simplicity and design as well. The last part is heating filtered water to the same temperature every time. I actually use a product designed to heat 16 oz of water quickly for oatmeal or noodles. ",
+            "sort_order": 10,
+            "article_id": 10
+          },
+          {
+            "type": "Header",
+            "text": "AeroPress ‘Expresso’",
+            "sort_order": 11,
+            "article_id": 10
+          },
+          {
+            "type": "Paragraph",
+            "text": "When it comes to making an espresso, the key parts involve passing water as steam over tightly packed and finely ground beans. I have been elaborating on a technique I found on youtube designed to emulate espresso with an AeroPress. ",
+            "sort_order": 12,
+            "article_id": 10
+          },
+          {
+            "type": "Paragraph",
+            "text": "The AeroPress is designed to allow coffee to be steeped for a certain length of time before using air pressure to force the coffee through the filter. This is counter to the purpose of an espresso, as the steam passing quickly through the beans imparts a different flavor than grounds soaking in warm water for a period of time.",
+            "sort_order": 13,
+            "article_id": 10
+          },
+          {
+            "type": "Paragraph",
+            "text": "The trick is to use finely ground beans inside of the AeroPress with a second filter on top of the beans. With the added filter, you can now tamp down and compress the ground into a puck of sorts. The puck needs to be dense enough to allow the water pressure in the AeroPress piston to build. Increasing the pressure of fluids will decrease the boiling point.",
+            "sort_order": 14,
+            "article_id": 10
+          },
+          {
+            "type": "Paragraph",
+            "text": "I don’t believe I’m getting actual steam to pass through my beans with this AeroPress hack, but I’ll take high pressure hot water over nothing! More importantly, I’m ultimately satisfied with the end result of this process; i.e. I really dig the coffee I’m making these days. ",
+            "sort_order": 15,
+            "article_id": 10
+          }
+        ]
+      }
+    }
+  ]
+}
