@@ -65,6 +65,12 @@ export const sideProjects: ResumeCard = {
   title: 'Side Projects',
   content: [
     {
+      title: 'Bocoshapers.com',
+      href: 'https://bocoshapers.com',
+      date: 'March 2017',
+      description: 'A custom CMS / website for Boulder Global Shapers. Built with Angular 2 / Firebase. CMS features role based authorization, authenticated routes, photo uploads, and CRUD functionality for upcoming event pages and blog posts. Built with Angular CLI and Angular Material 2. Source code: (<a href="https://github.com/bocoshapers/website">app</a>)'
+    },
+    {
       title: 'Sierpinski Triangle animated',
       href: 'https://githop.github.io/animate-canvas/',
       date: 'December 2016',
@@ -112,6 +118,12 @@ export const sideProjects: ResumeCard = {
 export const talks: ResumeCard = {
   title: 'Community / Talks',
   content: [
+    {
+      title: 'Angular Boulder Meetup - Angular with Firebase',
+      href: 'https://www.meetup.com/angular-boulder/events/238806189/',
+      date: 'May 2017',
+      description: 'Talk complete with slides and example app built to showcase using Angular 4.x, Angularfire2, and Firebase Cloud Functions. Example App uploads photos to Firebase and uses a Cloud function to call Google Cloud Vision API for Image recognition.'
+    },
     {
       title: 'BoulderJS Meetup - Functional Composition',
       href: 'http://www.meetup.com/Boulder-JS/events/232947542/',
