@@ -23,6 +23,8 @@ export class BgImagePipe implements PipeTransform {
 export class BlogComponent implements OnInit, AfterViewInit {
   articles;
   loading;
+  rawText;
+  foobar = 'hey now!!';
   constructor(public blogService: BlogService) { }
 
   ngOnInit() {
