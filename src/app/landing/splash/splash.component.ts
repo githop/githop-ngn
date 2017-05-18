@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
       
       <img class="gth-profile gth-border" src="/assets/githopProf.JPG"/>
       
-      <p>I enjoy learning new things, coding, all of the outdoor fun that Colorado has to offer.</p>
+      <p>I enjoy learning new things, coding, and all of the outdoor fun that Colorado has to offer.</p>
       </div>
     </div>
   `,
