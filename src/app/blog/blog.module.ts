@@ -1,6 +1,6 @@
-import {NgModule, ModuleWithProviders} from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {BlogComponent, BgImagePipe} from './blog.component';
+import { BlogComponent, BgImagePipe } from './blog.component';
 import { HttpModule } from "@angular/http";
 import {BlogService, FirebaseBlogService} from "./blog.service";
 import {BlogRoutesModule} from "./blog.routes";

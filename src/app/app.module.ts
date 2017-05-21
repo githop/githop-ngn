@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import {LandingModule} from "./landing/landing.module";
+import { LandingModule } from "./landing/landing.module";
 
 import { AppComponent } from './app.component';
 import {AppRoutesModule} from "./app.routes";
