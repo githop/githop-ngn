@@ -2,20 +2,21 @@
  * Created by githop on 11/13/16.
  */
 
-export interface CardInfo {
-  title: string;
+export interface CardContent {
   type: 'experience' | 'sideProjects' | 'talks' | 'startup' | 'education' | 'other';
+  title: string;
   href?: string;
   date: string;
   description: string;
   position?: string;
-  accomplishments?: Array<{text: string}>;
+  accomplishments?: Partial<CardAccomplishment>[];
   accomplishmentKeys?: string[];
 }
 
 export interface ResumeCard {
   title: string;
-  content: Array<CardInfo>;
+  content: CardContent[];
+  contentKeys?: string[];
 }
 
 export interface CardAccomplishment {
