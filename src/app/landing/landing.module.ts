@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { SplashComponent } from './splash/splash.component';
-import {LandingRoutesModule} from "./landing.routes.module";
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    LandingRoutesModule
+    RouterModule
   ],
   declarations: [NavComponent, FooterComponent, SplashComponent],
-  exports: [NavComponent, FooterComponent]
+  exports: [NavComponent, SplashComponent, FooterComponent]
 })
 export class LandingModule { }

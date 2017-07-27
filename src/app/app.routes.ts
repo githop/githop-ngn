@@ -4,9 +4,10 @@
 
 import {NgModule} from "@angular/core";
 import {RouterModule} from "@angular/router";
+import {SplashComponent} from './landing/splash/splash.component';
 
 const APP_ROUTES = [
-  { path: '', loadChildren: 'app/landing/landing.module#LandingModule'},
+  { path: '', component: SplashComponent },
   { path: 'resume', loadChildren: 'app/resume/resume.module#ResumeModule' },
   { path: 'blog', loadChildren: 'app/blog/blog.module#BlogModule'}
 ];
