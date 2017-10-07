@@ -32,7 +32,7 @@ export const experience: ResumeCard = {
       ]
     },
     {
-      title: 'Briebug Solultions',
+      title: 'Briebug Solutions',
       href: 'http://briebugsoftwaresolutions.com/',
       date: 'September 2015 - Short Term Contract',
       position: 'Full stack developer - PHP/JS',
