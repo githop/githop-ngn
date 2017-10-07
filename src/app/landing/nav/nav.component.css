@@ -11,7 +11,7 @@
   align-items: center;
   background: black;
   color: #F90050;
-  font-size: 4.8vw;
+  font-size: 4.3vw;
   border-bottom: none;
 }
 
@@ -20,7 +20,7 @@ and (min-device-width: 320px)
 and (max-device-width: 480px)
 and (-webkit-min-device-pixel-ratio: 2) {
   .gth-nav {
-    font-size: 7.7vw;
+    font-size: 7.2vw;
   }
 }
 
@@ -29,7 +29,7 @@ and (min-device-width: 480px)
 and (max-device-width: 1280px)
 and (-webkit-min-device-pixel-ratio: 2) {
   .gth-nav {
-    font-size: 5.7vw;
+    font-size: 5.2vw;
   }
 }
 
