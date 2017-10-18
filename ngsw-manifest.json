@@ -1,0 +1,21 @@
+{
+  "external": {
+    "urls": [
+      {"url": "https://fonts.googleapis.com/css?family=Fira+Mono"}
+    ]
+  },
+  "routing": {
+    "index": "/index.html",
+    "routes": {
+      "/": {
+        "prefix": false
+      },
+      "/resume": {
+        "prefix": false
+      },
+      "/blog": {
+        "prefix": true
+      }
+    }
+  }
+}
