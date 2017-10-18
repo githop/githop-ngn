@@ -1,7 +1,9 @@
 {
   "external": {
     "urls": [
-      {"url": "https://fonts.googleapis.com/css?family=Fira+Mono"}
+      { "url": "https://fonts.googleapis.com/css?family=Fira+Mono" },
+      { "url": "https://fonts.gstatic.com/s/firamono/v6/SlRWfq1zeqXiYWAN-lnG-pBw1xU1rKptJj_0jans920.woff2" }
+
     ]
   },
   "routing": {
@@ -17,5 +19,25 @@
         "prefix": true
       }
     }
+  },
+  "dynamic": {
+    "group": [
+      {
+        "name": "offline",
+        "urls": {
+          "https://githop.com/api/articles": {
+            "match": "prefix"
+          }
+        },
+        "cache": {
+          "cache": {
+            "optimizeFor": "performance",
+            "maxAgeMs": 360000000,
+            "maxEntries": 40,
+            "strategy": "lru"
+          }
+        }
+      }
+    ]
   }
 }
