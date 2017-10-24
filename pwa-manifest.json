@@ -1,0 +1,20 @@
+{
+  "short_name": "githop.com",
+  "name": "githop.com",
+  "icons": [
+    {
+      "src": "assets/images/githopProf-144X144.png",
+      "sizes": "144x144 512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/githopProf-192X192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "display": "standalone"
+}

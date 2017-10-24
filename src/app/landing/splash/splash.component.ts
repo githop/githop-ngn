@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
       <div class="gth-splash__body">
       <p>My name is Tom Hopkins. I live and work in Boulder, CO.</p>
       
-      <img class="gth-profile gth-border" src="/assets/githopProf.JPG"/>
+      <img class="gth-profile gth-border" src="/assets/githopProf-300x300.JPG"/>
       
       <p>I enjoy learning new things, coding, and all of the outdoor fun that Colorado has to offer.</p>
       </div>

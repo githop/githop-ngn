@@ -8,6 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="manifest" href="/ngsw-manifest.json">
+  <link rel="pwa-manifest" href="/pwa-manifest.json">
   <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
 </head>
 <body>
@@ -74,6 +75,12 @@
       <div class="double-bounce2"></div>
     </div>
   </gth-root>
+
+  <noscript>
+    <div class="gth-loading">
+      <h1>This page requires JavaScript.</h1>
+    </div>
+  </noscript>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
