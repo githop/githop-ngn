@@ -23,9 +23,9 @@
   "dynamic": {
     "group": [
       {
-        "name": "offline",
+        "name": "articles",
         "urls": {
-          "https://githop.com/api/articles": {
+          "/api/articles": {
             "match": "prefix"
           }
         },
