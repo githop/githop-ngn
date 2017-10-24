@@ -3,12 +3,12 @@
   "name": "githop.com",
   "icons": [
     {
-      "src": "assets/images/githopProf-144x144.png",
+      "src": "assets/githopProf-144x144.png",
       "sizes": "144x144 512x512",
       "type": "image/png"
     },
     {
-      "src": "assets/images/githopProf-194x194.png",
+      "src": "assets/githopProf-194x194.png",
       "sizes": "194x194",
       "type": "image/png"
     }
