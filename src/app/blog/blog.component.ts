@@ -1,5 +1,5 @@
-import {Component, OnInit, AfterViewInit, Pipe, PipeTransform} from '@angular/core';
-import {BlogService, Article, ArticleSnippet} from "./blog.service";
+import {Component, OnInit, AfterViewInit, Pipe, PipeTransform, AfterViewChecked} from '@angular/core';
+import {BlogService, Article, ArticleSnippet} from './blog.service';
 
 
 @Pipe({name: 'bgImage'})
@@ -20,25 +20,28 @@ export class BgImagePipe implements PipeTransform {
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.css']
 })
-export class BlogComponent implements OnInit, AfterViewInit {
-  articles;
-  loading;
-  constructor(public blogService: BlogService) { }
+export class BlogComponent implements OnInit {
+  articles: ArticleSnippet[] = [];
+  constructor(public blogService: BlogService) {
+  }
+
+  get isLoading() {
+    return this.articles != null && this.articles.length === 0;
+  }
 
   ngOnInit() {
     const articleSnippets: Array<ArticleSnippet> = [];
     this.blogService.articles
       .subscribe((articles: Array<Article>) => {
-        this.articles = articles.reduce((accm, a) => {
-          accm.push(a.getSnippet());
-          return accm;
-        }, articleSnippets).sort((a, b) => +new Date(b.date) - +new Date(a.date));
-        this.loading = false;
+        this.articles = articles.reduce(
+          (accm, a) => {
+            accm.push(a.getSnippet());
+            return accm;
+          },
+          articleSnippets
+        ).sort((a, b) => +new Date(b.date) - +new Date(a.date));
         this.blogService.calcPages();
-      })
+      });
   }
 
-  ngAfterViewInit() {
-    this.loading = this.articles.length === 0;
-  }
 }

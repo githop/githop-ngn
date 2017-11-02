@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
 import { LandingModule } from "./landing/landing.module";
 
 import { AppComponent } from './app.component';
 import {AppRoutesModule} from "./app.routes";
 import { BlogModule } from "./blog/blog.module";
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { BlogModule } from "./blog/blog.module";
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     LandingModule,
     AppRoutesModule,
     BlogModule.forRoot()

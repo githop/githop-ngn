@@ -1,15 +1,15 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BlogComponent, BgImagePipe } from './blog.component';
-import { HttpModule } from "@angular/http";
 import { BlogService } from "./blog.service";
 import { BlogRoutesModule } from "./blog.routes";
 import { PostComponent, PostStylePipe } from './post/post.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
-    HttpModule,
+    HttpClientModule,
     BlogRoutesModule
   ],
   declarations: [BlogComponent, PostComponent, BgImagePipe, PostStylePipe]

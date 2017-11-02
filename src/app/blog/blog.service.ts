@@ -2,10 +2,10 @@
  * Created by githop on 11/14/16.
  */
 
-import {Injectable} from "@angular/core";
-import {Http, Response} from "@angular/http";
-import {Observable, BehaviorSubject} from "rxjs";
-import {environment} from "../../environments/environment";
+import {Injectable} from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import {environment} from '../../environments/environment';
+import {HttpClient} from '@angular/common/http';
 
 export interface ArticleModel {
   title: string
@@ -38,6 +38,7 @@ export class Article implements ArticleModel, ArticleSnippet {
   public title;
   public content;
   public date;
+
   constructor(articleData) {
     Object.keys(articleData).forEach(prop => {
       this[prop] = articleData[prop];
@@ -46,8 +47,8 @@ export class Article implements ArticleModel, ArticleSnippet {
   }
 
   getSnippet(): ArticleSnippet {
-    const snippet = this.content.slice(0,3);
-    return new Article ({
+    const snippet = this.content.slice(0, 3);
+    return new Article({
       id: this.id,
       title: this.title,
       date: this.date,
@@ -60,10 +61,11 @@ export class Article implements ArticleModel, ArticleSnippet {
 
 @Injectable()
 export class BlogService {
-  private _articles: BehaviorSubject<Array<Article>|Array<ArticleSnippet>> = new BehaviorSubject([]);
+  private _articles: BehaviorSubject<Array<Article> | Array<ArticleSnippet>> = new BehaviorSubject([]);
   private _page = 4;
   private _pages;
-  constructor(private http: Http) {
+
+  constructor(private http: HttpClient) {
     this._getArticles();
   }
 
@@ -87,34 +89,18 @@ export class BlogService {
 
   private _getArticles() {
     return this.http.get(environment.apiUrl + '/articles')
-      .map(this.extractData)
-      .catch(this.handleError)
-      .subscribe(articlesData => {
-        const articlesArr =  articlesData.map(a => {
-          a = new Article(a.article);
-          return a;
-        });
-        this._pages = Math.ceil(articlesArr.length / this.page);
-        this._articles.next(articlesArr)
-      });
-  }
-
-  private extractData(res: Response) {
-    let body = res.json();
-    return body || {};
-  }
-
-  private handleError (error: Response | any) {
-    // In a real world app, we might use a remote logging infrastructure
-    let errMsg: string;
-    if (error instanceof Response) {
-      const body = error.json() || '';
-      const err = body.error || JSON.stringify(body);
-      errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
-    } else {
-      errMsg = error.message ? error.message : error.toString();
-    }
-    console.error(errMsg);
-    return Observable.throw(errMsg);
+      .subscribe(
+        (articlesData: any[]) => {
+          const articlesArr = articlesData.map(a => {
+            a = new Article(a.article);
+            return a;
+          });
+          this._pages = Math.ceil(articlesArr.length / this.page);
+          this._articles.next(articlesArr)
+        },
+        (err) => {
+          console.log('getArticles error', err);
+        }
+      );
   }
 }
