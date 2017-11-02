@@ -1,13 +1,13 @@
 <div class="gth-border gth-blog">
 
-  <div *ngIf="loading">
+  <div *ngIf="isLoading">
     <div class="gth-loading">
       <div class="double-bounce1"></div>
       <div class="double-bounce2"></div>
     </div>
   </div>
 
-  <div *ngIf="!loading">
+  <div *ngIf="!isLoading">
     <div class="gth-card gth-card--blog" [routerLink]="['/blog/post', article.id]" *ngFor="let article of articles.slice(0, blogService.page)">
       <div class="gth-card__header" [ngStyle]="article.image | bgImage">
         <h1><span class="gth-card__header--text">{{article.title}}</span></h1>
