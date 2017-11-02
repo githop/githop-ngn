@@ -1,5 +1,5 @@
-import {Component, OnInit, AfterViewInit, Pipe, PipeTransform, AfterViewChecked} from '@angular/core';
-import {BlogService, Article, ArticleSnippet} from './blog.service';
+import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { BlogService, Article, ArticleSnippet } from './blog.service';
 
 
 @Pipe({name: 'bgImage'})
