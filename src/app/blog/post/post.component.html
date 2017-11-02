@@ -6,7 +6,7 @@
     <div *ngFor="let content of article?.content; let index = index">
       <div [ngSwitch]="content.kind" class="gth-blog__content"
            [ngStyle]="{kind: content.kind, nextKind: article.content[index + 1]?.kind} | postStyle">
-        <img *ngSwitchCase="'Image'" [src]="content.href"/>
+        <img *ngSwitchCase="'Image'" [src]="content.href" alt="blog post image"/>
         <h2 *ngSwitchCase="'Header'">{{content.text}}</h2>
         <div *ngSwitchCase="'Paragraph'" [innerHtml]="content.text"></div>
       </div>
