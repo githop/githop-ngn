@@ -21,12 +21,15 @@
     "resources": {
       "files": [
         "/assets/**"
+      ],
+      "urls": [
+        "https://fonts.googleapis.com/**"
       ]
     }
   }],
   "dataGroups": [{
     "name": "articles",
-    "urls": ["https://githop.com/api/articles/**"],
+    "urls": ["https://githop.com/api/articles"],
     "cacheConfig": {
       "strategy": "performance",
       "maxSize": 20,
