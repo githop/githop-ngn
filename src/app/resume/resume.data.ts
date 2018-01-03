@@ -197,7 +197,7 @@ export const startup: ResumeCard = {
   content: [
     {
       type: 'startup',
-      title: '3rd Pace - 2014 Marijuana Tech Startup competition',
+      title: '3rd Place - 2014 Marijuana Tech Startup competition',
       href: 'http://www.cannabrokersnetwork.com/',
       date: '2014',
       description: '2 day hackathon style startup competition. Cannabrokers is a B2B online market for the cannabis industry. Built app on freelance basis and is still under development. Featured in BBC, Yahoo Finance.'
